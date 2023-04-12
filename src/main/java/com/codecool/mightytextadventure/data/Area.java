@@ -5,6 +5,7 @@ public class Area {
     private int[] options;
     private String[] optionsText;
 
+
     public Area(String description) {
         this.description = description;
         options = new int[0];
@@ -21,21 +22,27 @@ public class Area {
         return description;
     }
 
+
     public int getDirection(Integer playerChoice) {
-    //TODO: take index from input instead of word
-        if (options.length == 0) {
-            return 0;
-        } else if (playerChoice > options.length || playerChoice <= 0) {
-            return -1;
+        if (isPossibleChoice(playerChoice)) {
+            return options[playerChoice - 1];
         }
-        return options[playerChoice - 1];
+        return -1;
+    }
+
+    private boolean isPossibleChoice(Integer playerChoice) {
+        return (playerChoice <= options.length && playerChoice > 0);
     }
 
     public String toString(){
         String areaDescription = description + "\n";
         for (String text: optionsText) {
-            areaDescription += "\t" + text;
+            areaDescription += text + "\t";
         }
-        return areaDescription;
+        return areaDescription + ": ";
+    }
+
+    public boolean isEnd() {
+        return options.length == 0;
     }
 }
