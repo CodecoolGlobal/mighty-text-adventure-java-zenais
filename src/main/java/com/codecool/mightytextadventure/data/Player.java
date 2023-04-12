@@ -30,11 +30,12 @@ public class Player {
         this.name = name;
     }
 
-    public Area setArea(Area area) {
-        return area;
+    public void setArea(Area area) {
+        this.area = area;
     }
 
-    public ArrayList<String> setItems(ArrayList<String> items) {
-        return items;
+    public void setItems(ArrayList<String> items) {
+         this.items = items;
     }
+
 }
