@@ -1,9 +1,12 @@
 package com.codecool.mightytextadventure;
 
 import com.codecool.mightytextadventure.data.Area;
+import com.codecool.mightytextadventure.data.Player;
 import com.codecool.mightytextadventure.logic.Game;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
+
+import java.util.ArrayList;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,7 +17,17 @@ public class Application {
 
         Area[] areas = loadAreas();
 
-        Game game = new Game(areas, input, display);
+        display.printScannerQuestion("Enter player's name: ");
+        String playersName = input.getInputStringFromUser();
+        while (!playersName.matches("[a-zA-Z]+")) {
+            display.printScannerQuestion("Only characters are allowed! Please enter a valid name: ");
+            playersName = input.getInputStringFromUser();
+        }
+        Player player = new Player(playersName, areas[0], new ArrayList<>());
+        display.printMessage("Hello " +Player.getName() +"! \n It's friday night and you are standing in front of your friend's apartment complex.");
+
+
+        Game game = new Game(areas, input, display, player);
         game.run();
 
         display.printMessage("Exiting from Mighty Text Adventure!");
