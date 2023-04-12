@@ -14,5 +14,8 @@ public class Input {
         }
         return choice;
     }
-
+    public String getInputStringFromUser(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
+    }
 }
