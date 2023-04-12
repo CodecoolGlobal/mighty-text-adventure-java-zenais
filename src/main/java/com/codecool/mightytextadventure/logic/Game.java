@@ -5,21 +5,17 @@ import com.codecool.mightytextadventure.data.Player;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
-import java.util.ArrayList;
-
 public class Game {
     private final Area[] areas;
     private final Input input;
     private final Display display;
     private Player player;
 
-    public Game(Area[] areas, Input input, Display display) {
+    public Game(Area[] areas, Input input, Display display, Player player) {
         this.areas = areas;
         this.input = input;
         this.display = display;
-
-        //TODO: create Payer Method
-        player = new Player("Karl Marx", areas[0], new ArrayList<>());
+        this.player = player;
     }
 
     public void run() {
