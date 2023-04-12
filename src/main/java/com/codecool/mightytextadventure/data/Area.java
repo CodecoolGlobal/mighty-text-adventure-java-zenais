@@ -6,6 +6,7 @@ public class Area {
     private String[] optionsText;
 
 
+
     public Area(String description) {
         this.description = description;
         options = new int[0];
