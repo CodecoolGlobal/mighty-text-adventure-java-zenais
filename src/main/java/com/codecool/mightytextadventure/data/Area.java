@@ -3,19 +3,19 @@ package com.codecool.mightytextadventure.data;
 public class Area {
     private final String description;
     private int[] options;
-    private String[] optionsText;
+    private String[] optionMessages;
 
 
     public Area(String description) {
         this.description = description;
         options = new int[0];
-        optionsText = new String[0];
+        optionMessages = new String[0];
     }
 
-    public Area(String description, int[] options, String[] optionsText) {
+    public Area(String description, int[] options, String[] optionMessages) {
         this.description = description;
         this.options = options;
-        this.optionsText = optionsText;
+        this.optionMessages = optionMessages;
     }
 
     public String getDescription() {
@@ -35,11 +35,10 @@ public class Area {
     }
 
     public String toString() {
-        String areaDescription = description + "\n";
-        for (String text : optionsText) {
-            areaDescription += text + "\n";
+        String areaDescription = "\n" + description;
+        for (String message : optionMessages) {
+            areaDescription += "\n" + message;
         }
-        //TODO: add new line after input not after last option
         return areaDescription;
     }
 
