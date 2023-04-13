@@ -35,7 +35,7 @@ public class Area {
     }
 
     public String toString() {
-        String areaDescription = description;
+        String areaDescription = "\n" + description;
         for (String message : optionMessages) {
             areaDescription += "\n" + message;
         }
