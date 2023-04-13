@@ -213,7 +213,7 @@ public class Application {
         // explanation look into box for key
         areas[27] = new Area(
                 "In your hands there is this strange box, You notice there is an opening",
-                new int[]{31, 10},
+                new int[]{28, 10},
                 new String[]{
                         "1 - Look inside the box",
                         "2 - Leave the flat, maybe is party is better"
@@ -221,10 +221,10 @@ public class Application {
         );
         // key found enter the game explanation provided
         areas[28] = new Area(
-                "Wow, although innocent looking, there was something about that smiley",
-                new int[]{27, 30},
+                "Wow, this is strange, there is something written inside. It could be key",
+                new int[]{31, 30},
                 new String[]{
-                        "1 - Reach for the box",
+                        "1 - Try the key on computer",
                         "2 - Just quit, you're to tired for this"}
         );
         // search key in the room, ask Martin
