@@ -15,9 +15,12 @@ public class Application {
 
         display.printMessage("Starting Mighty Text Adventure!");
 
+        Player player = getPlayer(display, input);
+
         Area[] areas = loadAreas();
 
-        Player player = getPlayer(display, input, areas);
+        player.setArea(areas[0]);
+        System.out.println(Player.getName());
 
         Game game = new Game(areas, input, display, player);
         game.run();
@@ -25,14 +28,14 @@ public class Application {
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
 
-    private static Player getPlayer(Display display, Input input, Area[] areas) {
+    private static Player getPlayer(Display display, Input input) {
         display.printScannerQuestion("Enter player's name: ");
         String playersName = input.getInputStringFromUser();
         while (!playersName.matches("[a-zA-Z]+")) {
             display.printScannerQuestion("Only characters are allowed! Please enter a valid name: ");
             playersName = input.getInputStringFromUser();
         }
-        Player player = new Player(playersName, areas[0], new ArrayList<>());
+        Player player = new Player(playersName, new ArrayList<>());
         //display.printMessage("Hello " + Player.getName() + "! \nIt's friday night and you are standing in front of your friend's apartment complex.");
         return player;
     }
@@ -40,11 +43,11 @@ public class Application {
     private static Area[] loadAreas() {
         Area[] areas = new Area[47];
         areas[0] = new Area(
-                "Finally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
+                "Hello "+Player.getName() +"!" +"\nFinally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
                         "favorite movie with you (hard to believe, as for the last ten times you had to watch it alone) and \n" +
                         "is snuggeling up to you on the couch. As the movie starts you shout out \"Halleluja! The Lord finally \n" +
-                        "answered my prayers!\" Jamie is looking at you with a big smile. \"Happy Birthday, \"" + Player.getName() + "\n" +
-                        "Looks like this evening just couldn't get any better. But just before Scar pushes Mufasa into the \n" +
+                        "answered my prayers!\" Jamie is looking at you with a big smile. \"Happy Birthday, " +Player.getName() +"\"" +
+                        "\nLooks like this evening just couldn't get any better. But just before Scar pushes Mufasa into the \n" +
                         "stampede, your phone lights up... \"Thomas calling\"\n",
                 new int[]{1, 32},
                 new String[]{
