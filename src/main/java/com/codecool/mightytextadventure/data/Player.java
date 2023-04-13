@@ -3,7 +3,7 @@ package com.codecool.mightytextadventure.data;
 import java.util.ArrayList;
 
 public class Player {
-    private String name;
+    private static String name;
     private Area area;
     private ArrayList<String> items;
 
@@ -14,7 +14,7 @@ public class Player {
         this.items = items;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 

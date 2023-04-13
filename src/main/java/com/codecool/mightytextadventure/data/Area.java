@@ -38,9 +38,9 @@ public class Area {
     public String toString(){
         String areaDescription = description + "\n";
         for (String text: optionsText) {
-            areaDescription += text + "\t";
+            areaDescription += text + "\n";
         }
-        return areaDescription + ": ";
+        return areaDescription;
     }
 
     public boolean isEnd() {
