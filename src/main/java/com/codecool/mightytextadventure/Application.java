@@ -15,7 +15,7 @@ public class Application {
 
         display.printMessage("Starting Mighty Text Adventure!");
 
-        Player player = getPlayer(display, input);
+        Player player = createPlayer(display, input);
 
         Area[] areas = loadAreas();
 
@@ -28,7 +28,7 @@ public class Application {
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
 
-    private static Player getPlayer(Display display, Input input) {
+    private static Player createPlayer(Display display, Input input) {
         display.printScannerQuestion("Enter player's name: ");
         String playersName = input.getInputStringFromUser();
         while (!playersName.matches("[a-zA-Z]+")) {
