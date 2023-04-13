@@ -65,28 +65,35 @@ public class Application {
         areas[10] = new Area("30min later you and J standing in front of Thomas's door. You...",
                 new int[]{11,14},
                 new String[]{
-                        "1 - Enter, but decide to ignore everyone.\n",
+                        "1 - Enter, but decide to ignore everyone.",
                         "2 - Make best of it, and try to fit in."}
                 );
-        areas[11] = new Area("You change your mind and go straight forward to Thomas. He is telling you about a app called \"Restlverwerter\"," +
-                " which was one of his projects at some web module of a coding school...",
+        areas[11] = new Area("You change your mind and go straight forward to Thomas. He is telling you about a app called\n" +
+                "\"Restlverwerter\", which was one of his projects at some web module of a coding school...",
                 new int[]{10, 12},
-                new String[]{"(1) He catches your attention. You want to hear more and trying to sympathize with him.", "(2) You are getting bored. " +
-                        "Show hom indirectly that you want to leave this conversation. Point one foot in the direction you want to go."}
+                new String[]{"1 - He catches your attention. You want to hear more and trying to sympathize with him.",
+                        "2 - You are getting bored. " +
+                        "3 - Show hom indirectly that you want to leave this conversation. Point one foot in the direction you want to go."}
         );
-        areas[12] = new Area("This is a truly wise decision. You've heard and seen enough so far and now you're tired. It's time for power nap." +
-                "\nThere must be a couch somewhere around...",
+        areas[12] = new Area("This is a truly wise decision. You've heard and seen enough so far and now you're tired.\n" +
+                "It's time for power nap. There must be a couch somewhere around...",
                 new int[]{13, 14},
-                new String[]{"(1) Let's check upstairs.", "(2) Stay here, you still have some rest energy left."}
+                new String[]{
+                        "1 - Let's check upstairs.",
+                        "2 - Stay here, you still have some rest energy left."}
         );
         areas[13] = new Area("You are going upstairs. None of the guests recognized that you are sneaking into the forbidden area. " +
                 "Your are checking the first door - it's locked...",
                 new int[]{14, 15},
-                new String[]{"(1) This is a sign to go back downstairs.", "(2) You are curious, check the next door."}
+                new String[]{
+                        "1 - This is a sign to go back downstairs.",
+                        "2 - You are curious, check the next door."}
         );
         areas[14] = new Area("It seems nothing interesting here...",
                 new int[]{16, 17},
-                new String[]{"(1) Scream loud into the room to get everybody's attention.", "(2) Away from the guests in the corner there is a commode." +
+                new String[]{
+                        "1 - Scream loud into the room to get everybody's attention.",
+                        "2 - Away from the guests in the corner there is a commode." +
                         "\nYou try secretly to open one of it's drawers. "}
         );
         areas[15] = new Area("Carefully you are listening if you can hear somebody behind the door... ",
@@ -96,10 +103,9 @@ public class Application {
         areas[16] = new Area("Everybody is looking at you. You are starting to dance, some guests are confused," +
                 " but the majority now also dances with you.",
                 new int[]{12, 11},
-                new String[]{"(1) Dancing can be exhausting, time for a power nap.", "(2) Talk to Thomas."}
+                new String[]{"1 - Dancing can be exhausting, time for a power nap.", "(2) Talk to Thomas."}
         );
         areas[17] = new Area("There is a tiny box with a smiley on it. You like it, you take it, you keep it.",
-                //TODO: connect 1 with Zinaida's storyline
                 new int[]{14, 22},
                 new String[]{
                         "1 - Go back to center of the room.\n",
@@ -110,17 +116,17 @@ public class Application {
                 It's windy and cold in here, because the window is completely open. You are going to close it,\s
                 but suddenly the light goes out and the door slams shut. You notice a shadow of a figure in the corner...  \s""",
                 new int[]{19, 20},
-                new String[]{"(1) Throw your flashlight at it.", "(2) Shine the flashlight in it's face."}
+                new String[]{"1 - Throw your flashlight at it.", "(2) Shine the flashlight in it's face."}
         );
         areas[19] = new Area("The flashlight goes on and shines right in the persons face. You notice it's just a mannequin." +
                 "\nThat was creepy, though...",
                 new int[]{11, 5},
-                new String[]{"(1) Go back downstairs to the other guests.", "(2) Do something."}
+                new String[]{"1 - Go back downstairs to the other guests.", "(2) Do something."}
         );
         areas[20] = new Area("It's your partner shouting at you to wake up and go to work, because you are already late! " +
                 "You are looking around you - was everything a dream...?",
                 new int[]{0, 31},
-                new String[]{"(1) You are trying to hide under the covers and snooze another 10 minutes.", "(2) You are calming down your partner and get out of bed. "}
+                new String[]{"1 - You are trying to hide under the covers and snooze another 10 minutes.", "(2) You are calming down your partner and get out of bed. "}
         );
         ////////////////////////////////////////////////////////////////////////////////////////////////
         //Zinaida StoryLINE
@@ -144,26 +150,39 @@ public class Application {
                 "While thinking about party, you reach for pocket only to find mysterious cube. You...",
                 new int[]{24, 10, 25},
                 new String[]{
-                        "1 - Think of Martin... What is he doing going there?",
+                        "1 - Think of Martin... What was he thinking going there?",
                         "2 - Think of Thomas... is the party over?",
                         "3 - Think of J ... do I have to say sorry?"
                 }
                 );
-        // martin in the building
-        areas[24] = new Area("Zinaida");
-        // teleport to movie watching with J
+        areas[24] = new Area(
+                "Before you knew it you're standing in dim lighted building. This seems ominous... you...",
+                new int[]{26},
+                new String[]{
+                        "1 - Curiosity got better of you. Follow Martin in and find out what happens..."}
+        );
         areas[25] = new Area(
                 "Wait... what's happening. Everything is spinning. You feel sick... \n" +
-                        "You descover you teleported, or maybe woke up. Magic smiley box is still there. Wait... what to do?",
+                        "You discover you teleported, or maybe woke up. Magic smiley box is still there. Wait... what to do?",
                 new int[]{0},
-                new String[]{"1 - The only thing you can. Wait and see what happens. You hear yourself thinking..."}
+                new String[]{
+                        "1 - The only thing you can do. Wait and see what happens.\n" +
+                        "You hear yourself thinking... \n"}
         );
+        // dim lighted building codecool pary
         areas[26] = new Area("Zinaida");
+        // explanation look into box for key
         areas[27] = new Area("Zinaida");
+        // key found enter the game explanation provided
         areas[28] = new Area("Zinaida");
+        // search key in the room, ask Martin
         areas[29] = new Area("Zinaida");
-        areas[30] = new Area("Zinaida");
-        areas[31] = new Area("End");
+        areas[30] = new Area(
+                "You've accepted your loss. Maybe you should have just stayed at home :(");
+        areas[31] = new Area(
+                "Yay FINALLY something fun. You spend the rest of the evening playing text adventure...");
+        //////////////////////////////////////////////////////////////////////////////////////////
+        // Martins StoryLINE
         areas[32] = new Area(
                 "Without looking away from your tv-screen or even blinking your eyes you turn your phone upside down. \n" +
                         "Seconds later another phone starts ringing in the kitchen. While little Simba has to watch his father \n" +
