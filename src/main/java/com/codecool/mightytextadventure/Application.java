@@ -17,6 +17,15 @@ public class Application {
 
         Area[] areas = loadAreas();
 
+        Player player = getPlayer(display, input, areas);
+
+        Game game = new Game(areas, input, display, player);
+        game.run();
+
+        display.printMessage("Exiting from Mighty Text Adventure!");
+    }
+
+    private static Player getPlayer(Display display, Input input, Area[] areas) {
         display.printScannerQuestion("Enter player's name: ");
         String playersName = input.getInputStringFromUser();
         while (!playersName.matches("[a-zA-Z]+")) {
@@ -25,12 +34,7 @@ public class Application {
         }
         Player player = new Player(playersName, areas[0], new ArrayList<>());
         //display.printMessage("Hello " + Player.getName() + "! \nIt's friday night and you are standing in front of your friend's apartment complex.");
-
-
-        Game game = new Game(areas, input, display, player);
-        game.run();
-
-        display.printMessage("Exiting from Mighty Text Adventure!");
+        return player;
     }
 
     private static Area[] loadAreas() {
@@ -70,7 +74,8 @@ public class Application {
                 new String[]{"(1) He catches your attention. You want to hear more and trying to sympathize with him.", "(2) You are getting bored. " +
                         "Show hom indirectly that you want to leave this conversation. Point one foot in the direction you want to go."}
         );
-        areas[12] = new Area("This is a truly wise decision. You've heard and seen enough so far and now you're tired. It's time for power nap. There must be a couch somewhere around...",
+        areas[12] = new Area("This is a truly wise decision. You've heard and seen enough so far and now you're tired. It's time for power nap." +
+                "\nThere must be a couch somewhere around...",
                 new int[]{13, 14},
                 new String[]{"(1) Let's check upstairs.", "(2) Stay here, you still have some rest energy left."}
         );
@@ -81,7 +86,8 @@ public class Application {
         );
         areas[14] = new Area("It seems nothing interesting here...",
                 new int[]{16, 17},
-                new String[]{"(1) Scream loud into the room to get everybody's attention.", "(2) Away from the guests in the corner there is a commode. You try secretly to open one of it's drawers. "}
+                new String[]{"(1) Scream loud into the room to get everybody's attention.", "(2) Away from the guests in the corner there is a commode." +
+                        "\nYou try secretly to open one of it's drawers. "}
         );
         areas[15] = new Area("Carefully you are listening if you can hear somebody behind the door... ",
                 new int[]{18, 14},
