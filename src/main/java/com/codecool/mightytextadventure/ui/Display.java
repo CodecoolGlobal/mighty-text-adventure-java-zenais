@@ -16,7 +16,6 @@ public class Display {
         System.out.println("--- \"1\" to \"9\": \tChoose navigation option");
         System.out.println("--- \"h\" or \"help\": \tShow help information");
         System.out.println("----------------------------------------------\n");
-
+        System.out.println("Let's continue...\n");
     }
-
 }
