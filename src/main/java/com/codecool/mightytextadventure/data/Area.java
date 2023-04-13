@@ -4,7 +4,7 @@ public class Area {
     private final String description;
     private int[] options;
     private String[] optionsText;
-
+    private Player player;
 
 
     public Area(String description) {
@@ -35,9 +35,9 @@ public class Area {
         return (playerChoice <= options.length && playerChoice > 0);
     }
 
-    public String toString(){
+    public String toString() {
         String areaDescription = description + "\n";
-        for (String text: optionsText) {
+        for (String text : optionsText) {
             areaDescription += text + "\n";
         }
         return areaDescription;

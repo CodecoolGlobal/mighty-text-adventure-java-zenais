@@ -15,9 +15,12 @@ public class Application {
 
         display.printMessage("Starting Mighty Text Adventure!");
 
+        Player player = getPlayer(display, input);
+
         Area[] areas = loadAreas();
 
-        Player player = getPlayer(display, input, areas);
+        player.setArea(areas[0]);
+        System.out.println(Player.getName());
 
         Game game = new Game(areas, input, display, player);
         game.run();
@@ -25,14 +28,14 @@ public class Application {
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
 
-    private static Player getPlayer(Display display, Input input, Area[] areas) {
+    private static Player getPlayer(Display display, Input input) {
         display.printScannerQuestion("Enter player's name: ");
         String playersName = input.getInputStringFromUser();
         while (!playersName.matches("[a-zA-Z]+")) {
             display.printScannerQuestion("Only characters are allowed! Please enter a valid name: ");
             playersName = input.getInputStringFromUser();
         }
-        Player player = new Player(playersName, areas[0], new ArrayList<>());
+        Player player = new Player(playersName, new ArrayList<>());
         //display.printMessage("Hello " + Player.getName() + "! \nIt's friday night and you are standing in front of your friend's apartment complex.");
         return player;
     }
@@ -40,11 +43,11 @@ public class Application {
     private static Area[] loadAreas() {
         Area[] areas = new Area[47];
         areas[0] = new Area(
-                "Finally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
+                "Hello "+Player.getName() +"!" +"\nFinally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
                         "favorite movie with you (hard to believe, as for the last ten times you had to watch it alone) and \n" +
                         "is snuggeling up to you on the couch. As the movie starts you shout out \"Halleluja! The Lord finally \n" +
-                        "answered my prayers!\" Jamie is looking at you with a big smile. \"Happy Birthday, \"" + Player.getName() + "\n" +
-                        "Looks like this evening just couldn't get any better. But just before Scar pushes Mufasa into the \n" +
+                        "answered my prayers!\" Jamie is looking at you with a big smile. \"Happy Birthday, " +Player.getName() +"\"" +
+                        "\nLooks like this evening just couldn't get any better. But just before Scar pushes Mufasa into the \n" +
                         "stampede, your phone lights up... \"Thomas calling\"\n",
                 new int[]{1, 32, 21},
                 new String[]{
@@ -192,11 +195,11 @@ public class Application {
                 new int[]{33},
                 new String[]{"1 - Tears start rolling again"});
         areas[33] = new Area(
-                "J tells you, Thomas called to invite you both to this party at a mutual friend's place. Oh, how a \n" +
-                        "perfect evening can change in mere seconds. You didn't even make it to \"Hakuna Matata\". You know \n" +
-                        "exactly who is gonna be at this party. All of them J's friends and you don't like a single one of them. \n" +
-                        "They are either boring or just straight up stupid. And Thomas, who's also hosting the party is especially \n" +
-                        "strange. You don't really know why but you somehow just don't trust this guy.",
+                "J tells you, Thomas called to invite you both to this party at his place. Oh, how a perfect evening \n" +
+                        "can change in mere seconds. You didn't even make it to \"Hakuna Matata\". You know exactly who is \n" +
+                        "gonna be at this party. All of J's friends and you don't like a single one of them. They are either \n" +
+                        "boring or just straight up stupid. And Thomas is especially strange. You don't really know why but \n" +
+                        "somehow you just don't trust this guy.",
                 new int[]{34, 10},
                 new String[]{
                         "1 - You don't wanna go and start arguing with J",
@@ -231,17 +234,28 @@ public class Application {
         areas[40] = new Area(
                 "You somehow feel bad for how the evening went down. But no! You weren't the one changing plans last \n" +
                         "minute. And also... it's YOUR \"big\" day, isn't it? Let all of them bore themselves to death! At \n" +
-                        "least J will be sorry for not having stayed home after a few hours with this dimwits.\n" +
+                        "least J will be sorry for not having stayed home, after a few hours with this dimwits.\n" +
                         "Soon the movie has caught your full attention again and as always... as soon as the end credits \n" +
                         "roll you feel... hmmm... just content.\n" +
-                        "But what's that? Something is glowing on the table, right next to your \"No.1 Partymachine\"-coffemug. \n" +
+                        "But what's that? Something is glowing on the table, right next to your \"No.1 Partymachine\"-coffe mug. \n" +
                         "J's phone. So storming out of the flat in a rage isn't the best party-preparation-strategy after all, huh..?",
                 new int[]{41, 42},
                 new String[]{
                         "1 - Look at the phone. You wanna know what important message J is missing",
                         "2 - Ignore the phone. Not you're problem. You're just looking forward to J calling when getting home \n" +
                                 "by Uber is going to be a problem without a phone"});
-        areas[41] = new Area("", new int[]{}, new String[]{});
+        areas[41] = new Area(
+                "You grab the phone before the screen goes dark again and you read a text from Thomas \"Did it work?\n" +
+                        "U alone?\".  \n" +
+                        "The screen goes dark and so does your mind. \n" +
+                        "\"Thomas?\" \n" +
+                        "\"Thomas!\" \n" +
+                        "\"THOMAS!!!\"\n" +
+                        "Of course it's Thomas. You always knew it. This guy is just... But Jamie!? Why Jamie!? You didn't\n" +
+                        "expect that. For seconds, minutes, hours (ok... it's only minutes) you can't do anything but sit in\n" +
+                        "the dark and let the thoughts storm inside your head.",
+                new int[]{44},
+                new String[]{"1 - Sit in the dark and brood. Maybe cry a little."});
         areas[42] = new Area(
                 "Two hours later the end credits of your movie marathon's second movie wake you up from your not so \n" +
                         "restful slumber - pillows wet from your drool. Maybe you picked the wrong movie... why in hell would \n" +
@@ -263,8 +277,19 @@ public class Application {
                         "Or did you? Lying in bed you start thinking again... something's off about this Thomas. And why does \n" +
                         "he have his arm around Jamie? And whose phone did J post this picture on her IG from? But then sleep \n" +
                         "overcomes you and carries you away to Pride Rock where to new king is about to get crowned...");
-        areas[44] = new Area("", new int[]{}, new String[]{});
-        areas[45] = new Area("", new int[]{}, new String[]{});
+        areas[44] = new Area(
+                "But you can't just sit here alone and feel sorry for yourself forever! Well... or even a few\n" +
+                "minutes more. So you jump up and make a decision",
+                new int[]{45, 46},
+                new String[]{
+                        "1 - Get drunk",
+                        "2 - Go after J and try to catch her and Thomas in the act of betrayal. But actually you should give \n" +
+                                "       them some time get comfortable together at the party. Too comfortable! Let them have some \n" +
+                                "       drinks first. But then...\n" +
+                                "       So why not have a few drinks for now? Just to calm yourself down..."
+                });
+        areas[45] = new Area(
+                "", new int[]{}, new String[]{});
         areas[46] = new Area("", new int[]{}, new String[]{});
         return areas;
     }

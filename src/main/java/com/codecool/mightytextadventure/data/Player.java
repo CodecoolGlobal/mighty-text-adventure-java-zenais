@@ -8,9 +8,8 @@ public class Player {
     private ArrayList<String> items;
 
 
-    public Player(String name, Area area, ArrayList<String> items) {
+    public Player(String name, ArrayList<String> items) {
         this.name = name;
-        this.area = area;
         this.items = items;
     }
 
@@ -35,7 +34,7 @@ public class Player {
     }
 
     public void setItems(ArrayList<String> items) {
-         this.items = items;
+        this.items = items;
     }
 
 }
