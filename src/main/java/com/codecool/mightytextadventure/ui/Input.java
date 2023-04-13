@@ -11,7 +11,6 @@ public class Input {
         try {
             if (userInput.equalsIgnoreCase("help") ||
                     userInput.equalsIgnoreCase("h")) {
-                Display.printHelp();
                 return -2;
             }
             choice = Integer.parseInt(userInput);
