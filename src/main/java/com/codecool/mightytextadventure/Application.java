@@ -38,7 +38,7 @@ public class Application {
     }
 
     private static Area[] loadAreas() {
-        Area[] areas = new Area[47];
+        Area[] areas = new Area[61];
         areas[0] = new Area(
                 "Finally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
                         "favorite movie with you (hard to believe, as for the last ten times you had to watch it alone) and \n" +
@@ -179,7 +179,7 @@ public class Application {
                 new String[]{
                         "1 - Look at the phone. You wanna know what important message J is missing",
                         "2 - Ignore the phone. Not you're problem. You're just looking forward to J calling when getting home \n" +
-                                "by Uber is going to be a problem without a phone"});
+                                "    by Uber is going to be a problem without a phone"});
         areas[41] = new Area(
                 "You grab the phone before the screen goes dark again and you read a text from Thomas \"Did it work?\n" +
                         "U alone?\".  \n" +
@@ -204,7 +204,7 @@ public class Application {
                         "and flipping the bird at the camera with the other. \"Surprise parties without the surprise guest suck! \n" +
                         "#partypooper #simbashouldhavedied\"",
                 new int[]{43},
-                new String[]{"1 - You turn of your phone"});
+                new String[]{"1 - You turn off your phone"});
         areas[43] = new Area(
                 "Phew! You really dodged a bullet there! Surprise party... what the heck!? So... Guess you could say\n" +
                         "\n" +
@@ -220,13 +220,42 @@ public class Application {
                 new String[]{
                         "1 - Get drunk",
                         "2 - Go after J and try to catch her and Thomas in the act of betrayal. But actually you should give \n" +
-                                "       them some time get comfortable together at the party. Too comfortable! Let them have some \n" +
-                                "       drinks first. But then...\n" +
-                                "       So why not have a few drinks for now? Just to calm yourself down..."
+                                "    them some time get comfortable together at the party. Too comfortable! Let them have some \n" +
+                                "    drinks first. But then...\n" +
+                                "    So why not have a few drinks yourself? Just to calm your nerves..."
                 });
-        areas[45] = new Area(
-                "", new int[]{}, new String[]{});
-        areas[46] = new Area("", new int[]{}, new String[]{});
+        areas[45] = new Area("", new int[]{}, new String[]{});
+        areas[46] = new Area(
+                "The first drink goes down fast and you immediately feel better. The second one is a bit slower and\n" +
+                        "the storm behind your eyes starts brewing again. By the time you finish it, you're already agitated\n" +
+                        "enough to decide, that it's time to face Jamie and Thomas. So you get dressed and grab your keys. \n" +
+                        "On your way out your eyes fall on Jamie's old baseball-bat hanging on the wall above your bedroom door.",
+                new int[]{47, 48},
+                new String[]{"1 - Your wonder if you still might be young enough to learn how to play baseball \n" +
+                        "    and join some minor league team. But... doesn't matter now. You leave",
+                        "2 - You grab the bat and hide it in your jacket. Then you leave"
+                });
+        areas[47] = new Area("", new int[]{}, new String[]{});
+        areas[48] = new Area(
+                "30 minutes later you get off your bicycle in front of Thomas'. While locking the bike to a tree you\n" +
+                        "recognise Thomas' car parking on the other side of the street. Hmmm... maybe you could just...",
+                new int[]{55, 49},
+                new String[]{"1 - You are here. The car is here. Jamie's bat is here. Can't be a coincident. \n" +
+                        "    You get the bat and cross the street",
+                        "2 - Nah... not worth it. You go to the building and ring Thomas' bell"
+                });
+        areas[49] = new Area("", new int[]{}, new String[]{});
+        areas[50] = new Area("", new int[]{}, new String[]{});
+        areas[51] = new Area("", new int[]{}, new String[]{});
+        areas[52] = new Area("", new int[]{}, new String[]{});
+        areas[53] = new Area("", new int[]{}, new String[]{});
+        areas[54] = new Area("", new int[]{}, new String[]{});
+        areas[55] = new Area("", new int[]{}, new String[]{});
+        areas[56] = new Area("", new int[]{}, new String[]{});
+        areas[57] = new Area("", new int[]{}, new String[]{});
+        areas[58] = new Area("", new int[]{}, new String[]{});
+        areas[59] = new Area("", new int[]{}, new String[]{});
+        areas[60] = new Area("", new int[]{}, new String[]{});
         return areas;
     }
 }
