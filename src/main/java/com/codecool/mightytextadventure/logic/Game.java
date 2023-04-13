@@ -37,6 +37,7 @@ public class Game {
         }
 
         Integer playersChoice = input.getInputFromUser();
+        display.printMessage("\n");
         int direction = player.getArea().getDirection(playersChoice);
 
         if (direction == NO_POSSIBLE_DIRECTION) {
