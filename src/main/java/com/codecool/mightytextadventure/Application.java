@@ -228,7 +228,7 @@ public class Application {
                 new int[]{34, 10},
                 new String[]{
                         "1 - You don't wanna go and start arguing with J",
-                        "2 - You don't wanna go but you accept your faith (" + Player.getName() + "not happy)"});
+                        "2 - You don't wanna go but you accept your faith (" + Player.getName() + " not happy)"});
         areas[34] = new Area(
                 "J says \"I already promised and everyone is expecting you. I will look really bad, if you're not \n" +
                         "coming now!\"",
@@ -237,7 +237,7 @@ public class Application {
                         "1 - You beg",
                         "2 - You get angry",
                         "3 - You try to reason with J",
-                        "4 - You don't wanna go but you accept your faith (" + Player.getName() + "not happy)"});
+                        "4 - You don't wanna go but you accept your faith (" + Player.getName() + " not happy)"});
         areas[35] = new Area(
                 "J says \"Please... do it for me. And for them! You know how much they all love you! It will be so much fun!\"",
                 new int[]{35, 36, 34, 10},
@@ -245,7 +245,7 @@ public class Application {
                         "1 - You beg",
                         "2 - You get angry",
                         "3 - You try to reason with J",
-                        "4 - You don't wanna go but you accept your faith (" + Player.getName() + "not happy)"});
+                        "4 - You don't wanna go but you accept your faith (" + Player.getName() + " not happy)"});
         areas[36] = new Area(
                 "After a short but very intense fight, J tells you \"Go to hell! Or better... stay at hell with your \n" +
                         "poorly drawn tigers, pigs and weasels\" and storms out your flat",
@@ -313,7 +313,17 @@ public class Application {
                                 "    drinks first. But then...\n" +
                                 "    So why not have a few drinks yourself? Just to calm your nerves..."
                 });
-        areas[45] = new Area("", new int[]{}, new String[]{});
+        areas[45] = new Area(
+                "The first drink goes down fast and you immediately feel better. The second one is a bit slower and\n" +
+                        "the storm behind your eyes starts brewing again. By the time you finish it, you're already agitated\n" +
+                        "enough to decide, that it would be better to face Jamie and Thomas right now. \n" +
+                        "So you get dressed and grab your keys. \n" +
+                        "On your way out your eyes fall on Jamie's old baseball-bat hanging on the wall above your bedroom door.",
+                new int[]{47, 48},
+                new String[]{"1 - Your wonder if you still might be young enough to learn how to play baseball \n" +
+                        "    and join some minor league team. But... doesn't matter now. You leave",
+                        "2 - You grab the bat and hide it in your jacket. Then you leave"
+                });
         areas[46] = new Area(
                 "The first drink goes down fast and you immediately feel better. The second one is a bit slower and\n" +
                         "the storm behind your eyes starts brewing again. By the time you finish it, you're already agitated\n" +
