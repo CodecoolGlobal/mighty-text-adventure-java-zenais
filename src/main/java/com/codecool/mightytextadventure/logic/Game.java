@@ -8,6 +8,7 @@ import com.codecool.mightytextadventure.ui.Input;
 public class Game {
     public static final int NO_POSSIBLE_DIRECTION = 0;
     public static final int INVALID_DIRECTION = -1;
+    public static final int HELP = -2;
     private final Area[] areas;
     private final Input input;
     private final Display display;
@@ -40,8 +41,10 @@ public class Game {
 
         if (direction == NO_POSSIBLE_DIRECTION) {
             return false;
+        }else if (playersChoice.equals(HELP)) {
+            System.out.println("Let's continue...\n");
         } else if (direction == INVALID_DIRECTION) {
-            System.out.println("I don't understand, please try again?");
+            System.out.println("I don't understand, please try again?\n");
         } else {
             player.setArea(areas[direction]);
         }
