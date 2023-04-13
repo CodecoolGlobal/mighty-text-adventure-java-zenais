@@ -45,7 +45,7 @@ public class Application {
         areas[0] = new Area(
                 "Hello "+Player.getName() +"!" +"\nFinally... Your first friday evening without any plans in WEEKS. Jamie even agreed to watch your \n" +
                         "favorite movie with you (hard to believe, as for the last ten times you had to watch it alone) and \n" +
-                        "is snuggeling up to you on the couch. As the movie starts you shout out \"Halleluja! The Lord finally \n" +
+                        "is snuggling up to you on the couch. As the movie starts you shout out \"Halleluja! The Lord finally \n" +
                         "answered my prayers!\" Jamie is looking at you with a big smile. \"Happy Birthday, " +Player.getName() +"\"" +
                         "\nLooks like this evening just couldn't get any better. But just before Scar pushes Mufasa into the \n" +
                         "stampede, your phone lights up... \"Thomas calling\"\n",
@@ -159,7 +159,7 @@ public class Application {
                 }
                 );
         areas[24] = new Area(
-                "Before you knew it you're standing in dim lighted building. This seems ominous... you...",
+                "Before you knew it you're standing in dim lighted building. This seems ominous... you...\n",
                 new int[]{26},
                 new String[]{
                         "1 - Curiosity got better of you. Follow Martin in and find out what happens..."}
@@ -172,18 +172,43 @@ public class Application {
                         "1 - The only thing you can do. Wait and see what happens.\n" +
                         "You hear yourself thinking... \n"}
         );
-        // dim lighted building codecool pary
-        areas[26] = new Area("Zinaida");
+        areas[26] = new Area(
+                "You are in dim  lighted building, after what seems like 100 stairs, you reach strange room...\n" +
+                        "Inside is a big Table full of computers, on each is written: Please enter the KEY: ",
+                new int[]{27,29},
+                new String[]{
+                        "1 - You remember the box, you look for it",
+                        "2 - Ask Martin if he knows something."
+                }
+        );
         // explanation look into box for key
-        areas[27] = new Area("Zinaida");
+        areas[27] = new Area(
+                "In your hands there is this strange box, You notice there is an opening",
+                new int[]{31,10},
+                new String[]{
+                        "1 - Look inside the box",
+                        "2 - Leave the flat, maybe is party is better"
+                }
+                );
         // key found enter the game explanation provided
-        areas[28] = new Area("Zinaida");
+        areas[27] = new Area(
+                "Wow, although innocent looking, there was something about that smiley",
+                new int[]{27,30},
+                new String[]{
+                        "1 - Reach for the box",
+                        "2 - Just quit, you're to tired for this"}
+                );
         // search key in the room, ask Martin
-        areas[29] = new Area("Zinaida");
+        areas[29] = new Area("Martin, The key? Hmmmmm... I have no clue...",
+                new int[]{30, 28},
+                new String[]{
+                        "1 - Very disappointed you bow your head",
+                        "2 - There's still hope, check the smiley box"}
+        );
         areas[30] = new Area(
                 "You've accepted your loss. Maybe you should have just stayed at home :(");
         areas[31] = new Area(
-                "Yay FINALLY something fun. You spend the rest of the evening playing text adventure...");
+                "Yay FINALLY, you have the KEY. You spend the rest of the evening playing text adventure...");
         //////////////////////////////////////////////////////////////////////////////////////////
         // Martins StoryLINE
         areas[32] = new Area(
