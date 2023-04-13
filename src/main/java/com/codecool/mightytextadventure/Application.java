@@ -97,7 +97,7 @@ public class Application {
                 new String[]{
                         "1 - Scream loud into the room to get everybody's attention.",
                         "2 - Away from the guests in the corner there is a commode." +
-                        "\nYou try secretly to open one of it's drawers. "}
+                        "You try secretly to open one of it's drawers. "}
         );
         areas[15] = new Area("Carefully you are listening if you can hear somebody behind the door... ",
                 new int[]{18, 14},
