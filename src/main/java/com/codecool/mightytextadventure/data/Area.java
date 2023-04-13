@@ -24,13 +24,13 @@ public class Area {
 
 
     public int getDirection(Integer playerChoice) {
-        if (isPossibleChoice(playerChoice)) {
+        if (isChoicePossible(playerChoice)) {
             return options[playerChoice - 1];
         }
         return -1;
     }
 
-    private boolean isPossibleChoice(Integer playerChoice) {
+    private boolean isChoicePossible(Integer playerChoice) {
         return (playerChoice <= options.length && playerChoice > 0);
     }
 
