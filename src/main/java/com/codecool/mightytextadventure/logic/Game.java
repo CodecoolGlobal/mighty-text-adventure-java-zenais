@@ -8,7 +8,6 @@ import com.codecool.mightytextadventure.ui.Input;
 import java.util.ArrayList;
 
 public class Game {
-    public static final int NO_POSSIBLE_DIRECTION = 0;
     public static final int INVALID_DIRECTION = -1;
     private final Area[] areas;
     private final Input input;
@@ -42,9 +41,7 @@ public class Game {
         Integer playersChoice = input.getInputFromUser();
         int direction = player.getArea().getDirection(playersChoice);
 
-        if (direction == NO_POSSIBLE_DIRECTION) {
-            return false;
-        } else if (direction == INVALID_DIRECTION) {
+        if (direction == INVALID_DIRECTION) {
             System.out.println("I don't understand, please try again?");
         } else {
             player.setArea(areas[direction]);
