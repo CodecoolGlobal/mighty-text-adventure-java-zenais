@@ -1,20 +1,21 @@
 package com.codecool.mightytextadventure.data;
 
 public class Area {
+    public static final int INVALID_DIRECTION = -1;
     private final String description;
-    private int[] options;
-    private String[] optionMessages;
+    private final int[] areaIndex;
+    private final String[] optionMessages;
 
 
     public Area(String description) {
         this.description = description;
-        options = new int[0];
+        areaIndex = new int[0];
         optionMessages = new String[0];
     }
 
-    public Area(String description, int[] options, String[] optionMessages) {
+    public Area(String description, int[] areaIndexes, String[] optionMessages) {
         this.description = description;
-        this.options = options;
+        this.areaIndex = areaIndexes;
         this.optionMessages = optionMessages;
     }
 
@@ -25,13 +26,13 @@ public class Area {
 
     public int getDirection(Integer playerChoice) {
         if (isChoicePossible(playerChoice)) {
-            return options[playerChoice - 1];
+            return areaIndex[playerChoice - 1];
         }
-        return -1;
+        return INVALID_DIRECTION;
     }
 
     private boolean isChoicePossible(Integer playerChoice) {
-        return (playerChoice <= options.length && playerChoice > 0);
+        return (playerChoice <= areaIndex.length && playerChoice > 0);
     }
 
     public String toString() {
@@ -43,6 +44,6 @@ public class Area {
     }
 
     public boolean isEnd() {
-        return options.length == 0;
+        return areaIndex.length == 0;
     }
 }
