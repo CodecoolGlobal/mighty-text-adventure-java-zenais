@@ -4,7 +4,6 @@ public class Area {
     private final String description;
     private int[] options;
     private String[] optionsText;
-    private Player player;
 
 
     public Area(String description) {
