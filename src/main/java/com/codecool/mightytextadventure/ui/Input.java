@@ -3,9 +3,9 @@ package com.codecool.mightytextadventure.ui;
 import java.util.Scanner;
 
 public class Input {
+    Scanner scanner = new Scanner(System.in);
 
     public Integer getInputFromUser() {
-        Scanner scanner = new Scanner(System.in);
         String userInput = scanner.next();
         Integer choice = -1;
         try {
@@ -23,7 +23,6 @@ public class Input {
     }
 
     public String getInputStringFromUser() {
-        Scanner scanner = new Scanner(System.in);
         return scanner.next();
     }
 }
