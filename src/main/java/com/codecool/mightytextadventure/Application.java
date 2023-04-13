@@ -240,12 +240,13 @@ public class Application {
                 });
         areas[47] = new Area("", new int[]{}, new String[]{});
         areas[48] = new Area(
-                "30 minutes later you get off your bicycle in front of Thomas'. While locking the bike to a tree you\n" +
+                "30 minutes later you get off your bicycle in front of Thomas' building. While locking the bike to a tree you\n" +
                         "recognise Thomas' car parking on the other side of the street. Hmmm... maybe you could just...",
                 new int[]{55, 49},
                 new String[]{"1 - You are here. The car is here. Jamie's bat is here. Can't be a coincident. \n" +
                         "    You get the bat and cross the street",
-                        "2 - Nah... not worth it. You go to the building and ring Thomas' bell"
+                        "2 - Nah... not worth it. You go to the building and wait for someone to enter or exit \n" +
+                                "    the door, so you can slip in"
                 });
         areas[49] = new Area("", new int[]{}, new String[]{});
         areas[50] = new Area("", new int[]{}, new String[]{});
