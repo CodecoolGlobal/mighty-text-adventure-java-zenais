@@ -39,6 +39,7 @@ public class Area {
         for (String text : optionsText) {
             areaDescription += text + "\n";
         }
+        //TODO: add new line after input not after last option
         return areaDescription;
     }
 
