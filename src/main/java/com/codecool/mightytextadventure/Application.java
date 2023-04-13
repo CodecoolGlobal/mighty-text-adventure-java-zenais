@@ -315,10 +315,47 @@ public class Application {
         areas[52] = new Area("", new int[]{}, new String[]{});
         areas[53] = new Area("", new int[]{}, new String[]{});
         areas[54] = new Area("", new int[]{}, new String[]{});
-        areas[55] = new Area("", new int[]{}, new String[]{});
-        areas[56] = new Area("", new int[]{}, new String[]{});
-        areas[57] = new Area("", new int[]{}, new String[]{});
-        areas[58] = new Area("", new int[]{}, new String[]{});
+        areas[55] = new Area(
+                "The first swing doesn't do much to the car. Those SKODAS really are built like tanks. Or could it\n" +
+                        "have something to do with your baseball-bat-swinging-skills or whatever? The thought alone makes\n" +
+                        "you even more furious.\n" +
+                        "And so then second swing sends one exterior mirror flying. Now we're talking! Like Thor does his\n" +
+                        "mighty hammer you swing the bat again and again. Nothing can stop you. Not the blaring car alarm,\n" +
+                        "not the neighbors turning up behind their windows and watching you.\n" +
+                        "As your arms get tired and you turn away from the poor car you see J, Thomas and all the other\n" +
+                        "morons standing on the other side of the street. For a moment you can't help but grin about the\n" +
+                        "stupid looks on their faces in contrast to the stupid party hats they all are wearing.\n" +
+                        "But then you realize how you must look to them. A crazy person with a bat standing in the middle of \n" +
+                        "the road, grinning like a psychopath.",
+                new int[]{56, 56},
+                new String[]{"1 - You turn around and start running away",
+                            "2 - You drop the bat and stop walking towards Jamie"});
+        areas[56] = new Area(
+                "A police car comes round the corner stops right in front of you. Two pretty serious looking\n" +
+                        "officers get out the car. Weapons in your hand. You immediately drop down to your knees, hands\n" +
+                        "behind your head and close your eyes. Short version of this embarrassing situation:",
+                new int[]{57},
+                new String[]{"1 - You let the officers put you in the back of their car with as little resistance as possible"});
+        areas[57] = new Area(
+                "At the police station you sit on a very uncomfortable wooden chair. You feel pretty stupid. But\n" +
+                        "you also feel lonely, tired, angry, sad and ...bored.\n" +
+                        "So you get your phone out to distract yourself until one of the officers will come - presumably\n" +
+                        "to apologize to you. After all - nothing that has happened is actually your fault.\n" +
+                        "You check your instagram. And there it is! All those stupid people on one picture. All of them holding \n" +
+                        "balloons and wearing party hats but making sad faces. And J standing in the center, holding a cake with \n" +
+                        "one hand and flipping the bird at the camera with the other. \"Surprise parties without the surprise \n" +
+                        "guest suck! #partypooper #simbashouldhavedied\" " +
+                        "But the worst part actually is seeing Thomas with his arm around J. Looking somehow happy while trying\n" +
+                        "to make his sad face...\n", new int[]{58}, new String[]{"1 - You turn off your phone"});
+        areas[58] = new Area(
+                "Well... that can only mean\n" +
+                        "\n" +
+                        "!!! YOU LOST !!!\n" +
+                        "\n" +
+                        "But try seeing it that way: at least there's now more surprises left for this evening, right?\n" +
+                        "You look up and see an officer advancing. You straighten up to accept the coming apology with grace...\n",
+                new int[]{},
+                new String[]{});
         areas[59] = new Area("", new int[]{}, new String[]{});
         areas[60] = new Area("", new int[]{}, new String[]{});
         return areas;
