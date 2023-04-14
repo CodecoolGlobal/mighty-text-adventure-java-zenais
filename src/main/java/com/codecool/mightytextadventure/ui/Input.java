@@ -5,11 +5,15 @@ import java.util.Scanner;
 public class Input {
     public static final int INVALID_CHOICE = -1;
     public static final int HELP = -2;
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
-    public Integer getInputFromUser() {
+    public Input(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    public int getInputFromUser() {
         String userInput = scanner.next();
-        Integer choice = INVALID_CHOICE;
+        int choice = INVALID_CHOICE;
         try {
             if (userInput.equalsIgnoreCase("help") ||
                     userInput.equalsIgnoreCase("h")) {

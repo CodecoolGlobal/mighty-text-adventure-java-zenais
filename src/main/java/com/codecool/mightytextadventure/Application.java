@@ -7,11 +7,13 @@ import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
         Display display = new Display();
-        Input input = new Input();
+        Scanner scanner = new Scanner(System.in);
+        Input input = new Input(scanner);
 
         display.printMessage("Starting Mighty Text Adventure!");
 

@@ -31,16 +31,22 @@ public class Game {
     }
 
     private boolean step() {
-        String description = player.getArea().toString();
-        display.printMessage(description);
-
-        if (player.getArea().isEnd()) {
+        if (isGameOver()) {
             return GAME_END;
         }
+        performPlayerStep();
+        return GAME_ON;
+    }
 
+    private boolean isGameOver() {
+        String description = player.getArea().toString();
+        display.printMessage(description);
+        return player.getArea().isEnd();
+    }
+
+    private void performPlayerStep() {
         Integer playersChoice = input.getInputFromUser();
         int direction = player.getArea().getDirection(playersChoice);
-
         if (playersChoice.equals(HELP)) {
             Display.printHelp();
             input.getInputStringFromUser();
@@ -49,6 +55,5 @@ public class Game {
         } else {
             player.setArea(areas[direction]);
         }
-        return GAME_ON;
     }
 }

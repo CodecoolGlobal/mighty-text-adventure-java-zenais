@@ -19,11 +19,6 @@ public class Area {
         this.optionMessages = optionMessages;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-
     public int getDirection(Integer playerChoice) {
         if (isChoicePossible(playerChoice)) {
             return areaIndex[playerChoice - 1];
@@ -32,7 +27,7 @@ public class Area {
     }
 
     private boolean isChoicePossible(Integer playerChoice) {
-        return (playerChoice <= areaIndex.length && playerChoice > 0);
+        return playerChoice <= areaIndex.length && playerChoice > 0;
     }
 
     public String toString() {
